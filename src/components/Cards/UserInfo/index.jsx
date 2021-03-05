@@ -9,7 +9,7 @@ const UserInfo = () => {
                     <h5 className="card-title">User Info</h5>
                     <p className="card-text">Access your personal information</p>
                     <button className="btn btn-primary" href="/UserInfo">
-                    <a href="/TestPage" class="btn btn-info">
+                    <a href="/UserInfoPage" class="btn btn-info">
                             User Info
                      </a>
                     </button>

@@ -9,7 +9,7 @@ const TransactionHistory = () => {
                     <h5 className="card-title">Transaction History</h5>
                     <p className="card-text">Stay on top of all your transactions</p>
                     <button className="btn btn-primary" href="/UserInfo">
-                        <a href="/TestPage" class="btn btn-info">
+                        <a href="/TransactionHistoryPage" class="btn btn-info">
                             Transaction History
                         </a>
                     </button>
