@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
 
-import CurrentPricing from './components/CurrentPricing';
+import CurrentPricing from './components/CurrentPricing/CurrentPricing';
 
 
 
