@@ -1,11 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-const TransactionHistory = () => {
-    return (
-        <div className="panel-heading">
-            <b>Your Transactions History</b>
-        </div>
-    )
-}
+function TransactionHistory() {
+    return <h1>Hello this is the transactions page</h1>;
+  }
 
 export default TransactionHistory
