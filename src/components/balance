@@ -1,14 +1,34 @@
-{   import axios from 'axios'
+import axios from 'axios'
     import PropTypes from 'prop-types';
     import React from 'react';
    
-   export default class balance
+   export default class balance {
    state = {
-          balance : {this.setState({balance: data)}}
+          balance : []
    }
 
+   getValues() {
+          axios.get('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/balance')
+                    .then(res => {
+                        const balance = res.data;
+                        this.setState({balance});
 
- const balance = (props) => {
+                        headers: { 'x-api-key': "895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH" }
+          })
+
+   }
+
+   render() {
+          return(
+                
+                {this.state.balance}
+                
+          )
+   }
+
+}
+
+ const AccountInfo = (props) => {
     let {firstName, lastName, balance} = props;
     return ( 
     <div>
@@ -17,6 +37,12 @@
     </div>
     );
 }
+
+AccountInfo.propTypes = {
+    incomes: PropTypes.array,
+    expenses: PropTypes.array
+};
+
 
 
 

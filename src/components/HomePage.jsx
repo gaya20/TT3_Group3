@@ -4,22 +4,25 @@ import BuySellAsset from './Cards/BuySellAsset'
 import TransactionHistory from './Cards/TransactionHistory'
 import ViewBalances from './Cards/ViewBalances'
 import ViewPricing from './Cards/ViewPricing'
+import LogoutButton from './LogoutButton/LogoutButton'
 
 const HomePage = () => {
     return (
-        <table class ="table">
+        <table class="table">
             <thead>
                 <tr>
-                    <th scope ="col"><UserInfo></UserInfo></th>
-                    <th scope ="col"><BuySellAsset></BuySellAsset></th>
-                    <th scope = "col"><ViewBalances></ViewBalances></th>
+                    <th scope="col"><UserInfo></UserInfo></th>
+                    <th scope="col"><BuySellAsset></BuySellAsset></th>
+                    <th scope="col"><ViewBalances></ViewBalances></th>
                 </tr>
                 <tr>
-                    <th scope = "col"><TransactionHistory></TransactionHistory></th>
-                    <th scope = "col"><ViewPricing></ViewPricing></th>
+                    <th scope="col"><TransactionHistory></TransactionHistory></th>
+                    <th scope="col"><ViewPricing></ViewPricing></th>
+                    <th scope="col"><LogoutButton></LogoutButton></th>
                 </tr>
             </thead>
         </table>
+
     )
 }
 

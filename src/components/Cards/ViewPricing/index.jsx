@@ -8,8 +8,8 @@ const ViewPricing = () => {
                 <div className="card-body" >
                     <h5 className="card-title">View Asset Pricing</h5>
                     <p className="card-text">Check how much your digital assets are worth now</p>
-                    <button className="btn btn-primary btn-lg" href="/UserInfo">
-                        <a href="/CurrentPricingPage" class="btn btn-info">
+                    <button className="btn btn-primary btn-block">
+                        <a href="/CurrentPricingPage" className="btn btn-info">
                             Buy/Sell
                         </a>
                     </button>
