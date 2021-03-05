@@ -1,7 +1,6 @@
 import React,  { useEffect, useState, Component } from 'react';
 import axios from 'axios'
 
-
 const httpUrl = 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current';
 const API_KEY = '895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH';
 
