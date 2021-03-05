@@ -1,0 +1,47 @@
+import axios from 'axios'
+    import PropTypes from 'prop-types';
+    import React from 'react';
+   
+   export default class balance {
+   state = {
+          balance : []
+   }
+
+   getValues() {
+          axios.get('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/balance')
+                    .then(res => {
+                        const balance = res.data;
+                        this.setState({balance});
+          })
+
+   }
+
+   render() {
+          return(
+                <ul>
+                {this.state.balance.map(balance => <li> {balance.account}</li>)}
+                </ul>
+          )
+   }
+
+}
+
+ const AccountInfo = (props) => {
+    let {firstName, lastName, balance} = props;
+    return ( 
+    <div>
+     <div className="name">Name: {lastName} {firstName}</div>         
+     <h3 className="balance">Net Balance: {balance}</h3>     
+    </div>
+    );
+}
+
+AccountInfo.propTypes = {
+    incomes: PropTypes.array,
+    expenses: PropTypes.array
+};
+
+
+
+export default balance;
+}

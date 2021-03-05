@@ -9,6 +9,7 @@ import TestPage from '../src/components/TestPage'
 import TransactionHistory from '../src/components/TransactionHistoryPage/TransactionHistory'
 import CurrentPricing from '../src/components/CurrentPricing/CurrentPricing'
 import UserInfo from '../src/components/UserInfo/UserInfo'
+import LoggedOutPage from '../src/components/LoggedOutPage/LoggedOutPage'
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
                   <Route exact path = '/TransactionHistoryPage' component = {TransactionHistory}/>
                   <Route exact path = '/CurrentPricingPage' component = {CurrentPricing}/>
                   <Route exact path = '/UserInfoPage' component = {UserInfo}/>
+                  <Route exact path = '/GoodbyePage' component = {LoggedOutPage}/>
               </Switch>
           </div>
       </Router>
