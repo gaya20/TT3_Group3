@@ -8,7 +8,11 @@ const UserInfo = () => {
                 <div className="card-body" >
                     <h5 className="card-title">User Info</h5>
                     <p className="card-text">Access your personal information</p>
-                    <button className="btn btn-primary" href="/UserInfo">User Info</button>
+                    <button className="btn btn-primary" href="/UserInfo">
+                    <a href="/TestPage" class="btn btn-info">
+                            User Info
+                     </a>
+                    </button>
                 </div>
             </div>
         </div>
