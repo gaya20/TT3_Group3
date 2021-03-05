@@ -9,8 +9,12 @@ class CurrentPricing extends Component {
         timeStamp: null
     }
 
-    componenetDidUpdate () {
-        axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current')
+    componentDidUpdate () {
+        axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current',
+        {headers: {
+            'Content-Type': 'application/json',
+            'Authorization': '895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH'
+        }},)
         .then(response => {
             console.log('hello')
             console.log(response)
