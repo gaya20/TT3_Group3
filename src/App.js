@@ -5,12 +5,12 @@ import './App.css';
 import Login from './Login.js';
 import store from './store.js';
 import HomePage from '../src/components/HomePage'
-import TestPage from '../src/components/TestPage'
 import TransactionHistory from '../src/components/TransactionHistoryPage/TransactionHistory'
 import CurrentPricing from '../src/components/CurrentPricing/CurrentPricing'
 import UserInfo from '../src/components/UserInfo/UserInfo'
 import LoggedOutPage from '../src/components/LoggedOutPage/LoggedOutPage'
 import CallLoginAPI from './LoginAPI'
+import TradeAssets from './components/TradeAssetsPage/TradeAssets';
 
 const PersistantLogin = () => {
   console.log(document.cookie)
@@ -61,12 +61,12 @@ const App = () => {
       <Router>
           <div className="App">
               <Switch>
-                  <Route exact path='/' component={HomePage} />
-                  <Route exact path='/TestPage' component={TestPage} />
+                  <Route exact path ='/' component={HomePage} />
                   <Route exact path = '/TransactionHistoryPage' component = {TransactionHistory}/>
                   <Route exact path = '/CurrentPricingPage' component = {CurrentPricing}/>
                   <Route exact path = '/UserInfoPage' component = {UserInfo}/>
                   <Route exact path = '/GoodbyePage' component = {LoggedOutPage}/>
+                  <Route exact path = '/TradeAssetsPage' componet = {TradeAssets}/>
               </Switch>
           </div>
       </Router>
