@@ -14,10 +14,6 @@ const App = () => {
 
   if (store.getState().LoginSuccess)
   {
-    return (<div>Log in success</div>);
-  }
-  else
-  {
     return (
       <div>
       <Router>
@@ -25,13 +21,18 @@ const App = () => {
               <Switch>
                   <Route exact path='/' component={HomePage} />
                   <Route exact path='/TestPage' component={TestPage} />
-                  <Route exact path = '/TransactionHistoryPage' component ={TransactionHistory}/>
+                  <Route exact path = '/TransactionHistoryPage' component = {TransactionHistory}/>
                   <Route exact path = '/CurrentPricingPage' component = {CurrentPricing}/>
                   <Route exact path = '/UserInfoPage' component = {UserInfo}/>
               </Switch>
           </div>
       </Router>
-      </div>)  //<Login />;
+      </div>
+    );
+  }
+  else
+  {
+    return <Login/>
   }
   
 }
