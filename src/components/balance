@@ -13,7 +13,7 @@ import axios from 'axios'
                         const balance = res.data;
                         this.setState({balance});
 
-                        headers: { 'x-api-key': "895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH" }
+                        headers: { "x-api-key" : "895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH" }
           })
 
    }
@@ -27,24 +27,6 @@ import axios from 'axios'
    }
 
 }
-
- const AccountInfo = (props) => {
-    let {firstName, lastName, balance} = props;
-    return ( 
-    <div>
-     <div className="name">Name: {lastName} {firstName}</div>         
-     <h3 className="balance">Net Balance: {balance}</h3>     
-    </div>
-    );
-}
-
-AccountInfo.propTypes = {
-    incomes: PropTypes.array,
-    expenses: PropTypes.array
-};
-
-
-
-
+ 
 export default balance;
 }
