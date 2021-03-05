@@ -1,0 +1,14 @@
+.currPricing {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: row;
+}
+
+.symbol {
+    font-weight: bold;
+}
