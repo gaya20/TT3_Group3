@@ -12,15 +12,17 @@ import axios from 'axios'
                     .then(res => {
                         const balance = res.data;
                         this.setState({balance});
+
+                        headers: { 'x-api-key': "895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH" }
           })
 
    }
 
    render() {
           return(
-                <ul>
-                {this.state.balance.map(balance => <li> {balance.account}</li>)}
-                </ul>
+                
+                {this.state.balance}
+                
           )
    }
 
