@@ -16,7 +16,11 @@ const initialState = {
     {
       case 'Login Success':
         return { ...initialState,
-                 LoginSuccess : true };
+                 LoginSuccess : true,
+                 LoginDetails : {
+                     Username: action.payload.Username,
+                     Password: action.payload.Password
+                 } };
     }
   
     return initialState;
