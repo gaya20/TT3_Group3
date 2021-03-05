@@ -1,3 +1,4 @@
+
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from '../src/components/HomePage';
@@ -7,7 +8,6 @@ import TestPage from "./components/TestPage";
 
 function App() {
   return (
-    <div className="App">
       <div>
         <Router>
           <div>
@@ -19,6 +19,7 @@ function App() {
           </div>
         </Router>
       </div>
+
     </div>
     )
 }
