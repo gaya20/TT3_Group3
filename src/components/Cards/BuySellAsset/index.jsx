@@ -9,7 +9,7 @@ const BuySellAsset = () => {
                     <h5 className="card-title">Buy and Sell Assets</h5>
                     <p className="card-text">Buy or sell any digital asset such as BTC or ETH</p>
                     <button className="btn btn-primary btn-block">
-                        <a href="/TestPage" className="btn btn-info">
+                        <a href="/TradeAssetsPage" className="btn btn-info">
                             Buy/Sell
                         </a>
                     </button>

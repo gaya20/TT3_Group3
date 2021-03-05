@@ -10,7 +10,7 @@ const ViewPricing = () => {
                     <p className="card-text">Check how much your digital assets are worth now</p>
                     <button className="btn btn-primary btn-block">
                         <a href="/CurrentPricingPage" className="btn btn-info">
-                            Buy/Sell
+                            View Pricings
                         </a>
                     </button>
                 </div>
