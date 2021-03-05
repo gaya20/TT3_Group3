@@ -11,7 +11,7 @@ function App() {
         <Router>
           <div>
             <Switch>
-              <Route exact path='/' component={TransactionHistory} />
+              {/* <Route exact path='/' component={TransactionHistory} /> */}
             </Switch>
           </div>
         </Router>
