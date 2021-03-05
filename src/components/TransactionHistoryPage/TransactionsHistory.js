@@ -1,7 +1,6 @@
 import React,  { useEffect, useState, Component } from 'react';
 import axios from 'axios'
 
-
 const httpUrl = 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/view';
 const API_KEY = '895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH';
 const ACCOUNT_KEY = 'e049e315-7ec7-483c-b41d-0f37121e2550';
@@ -9,7 +8,7 @@ const ACCOUNT_KEY = 'e049e315-7ec7-483c-b41d-0f37121e2550';
 const TransactionsHistory = () => {
     const [values, setValues] = useState({});
     useEffect(() => {
-        const fetchAssetValue = () => {
+        const fetchData = () => {
            fetch(httpUrl, {
                 method: 'POST',
                 mode: 'cors',
@@ -24,7 +23,7 @@ const TransactionsHistory = () => {
             .then(data => setValues({...data}))
             .catch(error => console.log(error))
         }
-        fetchAssetValue();
+        fetchData();
     }, [values,setValues]);
     return (
         <div>
@@ -35,7 +34,7 @@ const TransactionsHistory = () => {
                 Order Type {values.orderType}
             </div>
             <div>
-                Data accurate as of: {values.timestamp}
+                Accurate as of {values.timestamp}
             </div>
             <div>
                 Asset {values.assetSymbol}
