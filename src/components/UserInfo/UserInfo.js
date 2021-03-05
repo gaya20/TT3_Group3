@@ -1,3 +1,5 @@
+//gayathri batchu
+
 import axios from 'axios'
 import React,  { useEffect, useState, Component } from 'react';
 
@@ -9,9 +11,9 @@ const API_KEY = '895Z21koZEasz7rGcQnPw9Z3BgZUoTln4Lnda9jH'
 
 const UserInfo = () => {
 
-    const [values, setValues] = useState({});
+    const [values, setUserInfo] = useState({});
     useEffect(() => {
-        const fetchValue = () => {
+        const fetchUserInfo = () => {
            fetch(httpUrl, {
                 method: 'POST',
                 mode: 'cors',
@@ -20,37 +22,40 @@ const UserInfo = () => {
                 }
             })
             .then(response => response.json())
-            .then(data => setValues({...data}))
+            .then(data => setUserInfo({...data}))
             .catch(error => console.log(error))
         }
-        fetchValue();
+        fetchUserInfo();
         // refresh asset price every minute
        /*  const interval = setInterval(() => fetchAssetValue(), 60000)
         return () => {
           clearInterval(interval);
         } */
-    }, [values,setValues]);
+    }, [values,setUserInfo]);
 
     return(
         <div className="Container">
             <div className="Header">
-            YOUR INFORMATION
+              YOUR INFORMATION
             </div>
             <div className="Details">
             <div>
-                Account Name: {values.username}
+                Account Name: Group3
             </div>
             <div>
-                Email:
+                Email: group3@techtrek.com
             </div>
             <div>
-                Phone Number:
+                Phone Number: (+65) 96453923
             </div>
             <div>
-                Full Name:
+                Full Name: Laurel Keebler
             </div>
             <div>
-                Your NRIC: 
+                NRIC: S35005657H
+            </div>
+            <div>
+                Address: 716 Lynch Inlet
             </div>
 
             </div>
