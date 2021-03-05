@@ -25,9 +25,11 @@ const initialState = {
                      Password: action.payload.Password
                  } };
       case 'Set Remember Me':
-        return { ...initialState, RememberMe: action.payload.value }
+        return { ...initialState, RememberMe: action.payload.value };
       case 'Login Error':
-        return { ...initialState, ShowErrorMsg: true }
+        return { ...initialState, ShowErrorMsg: true };
+      case 'Logout':
+        return { ...initialState, LoginSuccess : false };
       
     }
   
