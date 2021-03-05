@@ -10,6 +10,7 @@ import TransactionHistory from '../src/components/TransactionHistoryPage/Transac
 import CurrentPricing from '../src/components/CurrentPricing/CurrentPricing'
 import UserInfo from '../src/components/UserInfo/UserInfo'
 import LoggedOutPage from '../src/components/LoggedOutPage/LoggedOutPage'
+import CallLoginAPI from './LoginAPI'
 
 const PersistantLogin = () => {
   console.log(document.cookie)
@@ -17,8 +18,11 @@ const PersistantLogin = () => {
   var username = getCookie("username");
   var password = getCookie("password");
 
-  console.log("User: " + username);
-  console.log("Pass: " + password);
+  if (getCookie("login") == "true")
+  {
+    CallLoginAPI(username, password, false);
+  }
+
 }
 
 function getCookie(cname) {
@@ -45,8 +49,11 @@ function getCookie(cname) {
 
 const App = () => {
 
-  PersistantLogin();
-
+  if (store.getState().LoginSuccess == false)
+  {
+    PersistantLogin();
+  }
+  
   if (store.getState().LoginSuccess)
   {
     return (

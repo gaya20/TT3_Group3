@@ -1,38 +1,19 @@
 import './App.css';
 import { useState } from 'react';
 import store from './store.js'
+import CallLoginAPI from './LoginAPI.js';
 
 const Login = () => {
 
     const [ username, setUsername ] = useState(localStorage.username);
     const [ password, setPassword ] = useState(localStorage.password);
-
-    const [ showErrorMsg, setShowErrorMsg ] = useState(false);
+;
     const [ rememberMe, setRememberMe ] = useState(false);
 
     const TryLogin = (event) => {
         event.preventDefault();
 
-        // Input API code to check if username and password is correct
-        if (username == "test" && password == "test")
-        {
-            store.dispatch({ type: 'Login Success', 
-                             payload: {
-                                 Username: username,
-                                 Password: password 
-                             }});
-
-            // Update
-            localStorage.username = rememberMe ? username : "";
-            localStorage.password = rememberMe ? password : "";
-            
-            document.cookie = "username=" + password + ";";
-            document.cookie = "password=" + password + ";";
-        }
-        else
-        {
-            setShowErrorMsg(true);
-        }
+        CallLoginAPI(username, password, true);
     }
 
     // Functions to edit state variables
@@ -46,6 +27,12 @@ const Login = () => {
     
     const EditRememberMe = (event) => {
         setRememberMe(event.target.value);
+
+        store.dispatch({ type: 'Set Remember Me', 
+                             payload: {
+                                 RememberMe: event.target.value
+                             }});
+
     }
 
     return (
@@ -54,7 +41,7 @@ const Login = () => {
           <div><pre>Username   <input value={ username } onChange={ EditUsername }></input></pre></div>
           <div><pre>Password   <input value={ password } onChange={ EditPassword }></input></pre></div>
           <input type="checkbox" value={ rememberMe } onChange={ EditRememberMe }></input>Remember me?
-          { showErrorMsg ? <div>Incorrect username or password</div> : <div></div> }
+          { store.getState().ShowErrorMsg ? <div>Incorrect username or password</div> : <div></div> }
           <p></p>
           <button className="Button" type="submit">Login</button>
         </form>
