@@ -10,7 +10,41 @@ import TransactionHistory from '../src/components/TransactionHistoryPage/Transac
 import CurrentPricing from '../src/components/CurrentPricing/CurrentPricing'
 import UserInfo from '../src/components/UserInfo/UserInfo'
 
+const PersistantLogin = () => {
+  console.log(document.cookie)
+
+  var username = getCookie("username");
+  var password = getCookie("password");
+
+  console.log("User: " + username);
+  console.log("Pass: " + password);
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  
+  for(var i = 0; i < ca.length; i++) 
+  {
+    var c = ca[i];
+    
+    while (c.charAt(0) == ' ') 
+    {
+      c = c.substring(1);
+    }
+    
+    if (c.indexOf(name) == 0) 
+    {
+      return c.substring(name.length, c.length);
+    }
+  }
+
+  return "";
+}
+
 const App = () => {
+
+  PersistantLogin();
 
   if (store.getState().LoginSuccess)
   {
